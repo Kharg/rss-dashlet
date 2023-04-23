@@ -12,8 +12,10 @@ This Extension adds a RSS dashlet to read newsfeed from your dashboard.
 
 This Extension adds a RSS dashlet to read newsfeed from your dashboard with many customizable options: 
 
-- Customizable Date-Time Format
+- Customizable Date-Time Format and Separator based on 3 enum fields.
+- Use Moment.js to format Date-Time as you wish
 - Hide Article Summary
+- Hide Article Time
 - AutoRefresh the feed
 
 After installation visit your dashboard and add the RSS Feed dashlet to start using the extension. 
