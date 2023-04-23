@@ -13,6 +13,8 @@ define('rss:views/dashlets/rss-dashlet', ['views/dashlets/abstract/base'], funct
             this.timeSeparator = this.getOption("timeSeparator");
             this.dateFormat = this.getOption("dateFormat");
             this.timeFormat = this.getOption("timeFormat");
+            this.dateTimeOption = this.getOption("dateTimeOption");
+            this.momentDateTimeFormat = this.getOption("momentDateTimeFormat");
             if (this.getOption("feed")) {
               this.loadFeed(true);
             }
@@ -34,6 +36,13 @@ define('rss:views/dashlets/rss-dashlet', ['views/dashlets/abstract/base'], funct
             this.feedUrl = this.getOption("feed");
             const dateFormat = this.dateFormat === "System" ? this.getConfig().get('dateFormat') : this.dateFormat;
             const timeFormat = this.timeFormat === "System" ? this.getConfig().get('timeFormat') : this.timeFormat;
+
+            if (this.dateTimeOption === "Dashlet") {
+                var completeDateFormat = dateFormat + this.timeSeparator + timeFormat;
+            } else {
+                var completeDateFormat = this.momentDateTimeFormat ? this.momentDateTimeFormat : dateFormat + this.timeSeparator + timeFormat;
+            }
+
             const options = {
                 dataType: 'text'
             };
@@ -45,7 +54,7 @@ define('rss:views/dashlets/rss-dashlet', ['views/dashlets/abstract/base'], funct
                     const items = xmlDoc.querySelectorAll("item");
                     const feedData = Array.from(items).map(item => {
                         const pubDate = item.querySelector("pubDate").textContent;
-                        const formattedPubDate = moment(pubDate).format(dateFormat + this.timeSeparator + timeFormat);
+                        const formattedPubDate = moment(pubDate).format(completeDateFormat);
                         const description = this.extractCdataContent(item.querySelector("description")) || this.extractCdataContent(item.querySelector("content")) || '';
                         return {
                             title: item.querySelector("title").textContent,

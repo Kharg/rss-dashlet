@@ -1,0 +1,20 @@
+{
+    "fields": {
+      "feed": "URL Feed",
+      "includeArticleDescription": "Includi Descrizione Articolo",
+      "timeSeparator": "Separatore Tempo",
+      "dateFormat": "Formato Data",
+      "timeFormat": "Formato Ora",
+      "momentDateTimeFormat": "Formato DataOra Custom",
+      "dateTimeOption": "Campi DataOra"
+    },
+    "options": {
+      "mode": {}
+    },
+    "messages": {
+    },
+    "tooltips": {
+      "momentDateTimeFormat": "Usa la formattazione di Moment.js",
+      "dateTimeOption": "Seleziona quali campi utilizzare per la formattazione del tempo"
+    }
+  }

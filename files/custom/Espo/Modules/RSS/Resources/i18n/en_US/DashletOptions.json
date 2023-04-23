@@ -4,15 +4,17 @@
       "includeArticleDescription": "Include Article Description",
       "timeSeparator": "Time Separator",
       "dateFormat": "Date Format",
-      "timeFormat": "Time Format"
+      "timeFormat": "Time Format",
+      "momentDateTimeFormat": "Custom DateTime Format",
+      "dateTimeOption": "Date Time Field"
     },
     "options": {
-      "mode": {
-        "System": "System Default"
-      }
+      "mode": {}
     },
     "messages": {
     },
     "tooltips": {
+      "momentDateTimeFormat": "Use Moment.js formatting",
+      "dateTimeOption": "Select which fields to use for the date time format"
     }
   }

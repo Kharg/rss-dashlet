@@ -48,14 +48,29 @@
         ", ",
         " / "
     ]
+},
+"dateTimeOption": {
+  "type": "enum",
+  "tooltip": true,
+    "options": [
+        "Dashlet",
+        "Custom"
+    ]
+},
+"momentDateTimeFormat": {
+  "type": "varchar",
+  "trim": true,
+  "tooltip": true
 }
     },
     "defaults": {
       "autorefreshInterval": 0.5,
       "includeArticleDescription": true,
-      "dateFormat": "DD/MM/YYYY",
-      "timeFormat": "HH:mm",
-      "timeSeparator": ", "
+      "dateFormat": "System",
+      "timeFormat": "System",
+      "timeSeparator": ", ",
+      "dateTimeOption": "Dashlet",
+      "momentDateTimeFormat": "llll"
     },
     "layout": [
       {
@@ -71,6 +86,9 @@
           ],
           [
             {"name": "dateFormat"}, {"name": "timeFormat"}, {"name": "timeSeparator"}
+          ],
+          [
+            {"name": "dateTimeOption"}, {"name": "momentDateTimeFormat"}
           ]
         ]
       }
