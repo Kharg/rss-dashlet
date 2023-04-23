@@ -2,6 +2,7 @@
     "fields": {
       "feed": "Feed URL",
       "includeArticleDescription": "Include Article Description",
+      "includeArticleTime": "Include Article Time",
       "timeSeparator": "Time Separator",
       "dateFormat": "Date Format",
       "timeFormat": "Time Format",

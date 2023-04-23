@@ -8,7 +8,9 @@
                         {{#if ../includeArticleDescription}}
                             <div class="text-muted">{{{preview}}}</div>
                         {{/if}}
+                        {{#if ../includeArticleTime}}
                         <div class="text-muted small">{{pubDate}}</div>
+                        {{/if}}
                     </li>
                 {{/each}}
             </ul>

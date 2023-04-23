@@ -10,6 +10,7 @@ define('rss:views/dashlets/rss-dashlet', ['views/dashlets/abstract/base'], funct
             Dep.prototype.setup.call(this);
             this.feedData = [];
             this.includeArticleDescription = this.getOption("includeArticleDescription");
+            this.includeArticleTime = this.getOption("includeArticleTime");
             this.timeSeparator = this.getOption("timeSeparator");
             this.dateFormat = this.getOption("dateFormat");
             this.timeFormat = this.getOption("timeFormat");
@@ -72,6 +73,7 @@ define('rss:views/dashlets/rss-dashlet', ['views/dashlets/abstract/base'], funct
             return {
                 feedData: this.feedData,
                 includeArticleDescription: this.includeArticleDescription,
+                includeArticleTime: this.includeArticleTime,
             };
         },
   
