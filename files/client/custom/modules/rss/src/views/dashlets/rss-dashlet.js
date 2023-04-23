@@ -52,17 +52,12 @@ define('rss:views/dashlets/rss-dashlet', ['views/dashlets/abstract/base'], funct
                     const parser = new DOMParser();
                     const xmlDoc = parser.parseFromString(response, "text/xml");
                     const items = xmlDoc.querySelectorAll("item");
-                    const feedData = Array.from(items).map(item => {
-                        const pubDate = item.querySelector("pubDate").textContent;
-                        const formattedPubDate = moment(pubDate).format(completeDateFormat);
-                        const description = this.extractCdataContent(item.querySelector("description")) || this.extractCdataContent(item.querySelector("content")) || '';
-                        return {
-                            title: item.querySelector("title").textContent,
-                            link: item.querySelector("link").textContent,
-                            pubDate: formattedPubDate,
-                            preview: description
-                        };
-                    });
+                    const feedData = Array.from(items).map(item => ({
+                        title: item.querySelector("title")?.textContent ?? null,
+                        link: item.querySelector("link")?.textContent ?? null,
+                        pubDate: item.querySelector("pubDate")?.textContent ? moment(item.querySelector("pubDate").textContent).format(completeDateFormat) : null,
+                        preview: this.extractCdataContent(item.querySelector("description") || item.querySelector("content")) ?? '',
+                      }));
                     this.feedData = feedData;
                     if (initialLoad) {
                         this.render();
