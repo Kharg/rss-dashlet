@@ -9,6 +9,7 @@ define('rss:views/dashlets/rss-dashlet', ['views/dashlets/abstract/base'], funct
         setup: function () {
             Dep.prototype.setup.call(this);
             this.feedData = [];
+            this.includeArticleDescription = this.getOption("includeArticleDescription");
             if (this.getOption("feed")) {
               this.loadFeed(true);
             }
@@ -62,7 +63,8 @@ define('rss:views/dashlets/rss-dashlet', ['views/dashlets/abstract/base'], funct
   
         data: function () {
             return {
-                feedData: this.feedData
+                feedData: this.feedData,
+                includeArticleDescription: this.includeArticleDescription,
             };
         },
   

@@ -1,6 +1,7 @@
 {
     "fields": {
-      "feed": "Feed URL"
+      "feed": "Feed URL",
+      "includeArticleDescription": "Include Article Description"
     },
     "options": {
       "mode": {}

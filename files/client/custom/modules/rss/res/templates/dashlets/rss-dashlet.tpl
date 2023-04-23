@@ -5,7 +5,9 @@
                 {{#each feedData}}
                     <li class="list-group-item list-row">
                         <a href="{{link}}" target="_blank" class="text-primary">{{title}}</a>
-                        <div class="text-muted">{{{preview}}}</div>
+                        {{#if ../includeArticleDescription}}
+                            <div class="text-muted">{{{preview}}}</div>
+                        {{/if}}
                         <div class="text-muted small">{{pubDate}}</div>
                     </li>
                 {{/each}}

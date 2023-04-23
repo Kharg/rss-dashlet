@@ -14,22 +14,27 @@
       "autorefreshInterval": {
         "type": "enumFloat",
         "options": [0, 0.5, 1, 2, 5, 10]
+      },
+      "includeArticleDescription": {
+        "type": "bool",
+        "required": false
       }
     },
     "defaults": {
-      "autorefreshInterval": 0.5
+      "autorefreshInterval": 0.5,
+      "includeArticleDescription": false
     },
     "layout": [
       {
         "rows": [
           [
-            { "name": "title" }
+            {"name": "title"}
           ],
           [
-            { "name": "feed" }
+            {"name": "feed"}
           ],
           [
-            { "name": "autorefreshInterval" }
+            {"name": "autorefreshInterval"}, {"name": "includeArticleDescription"}
           ]
         ]
       }
