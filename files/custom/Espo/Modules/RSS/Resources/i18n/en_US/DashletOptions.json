@@ -1,10 +1,15 @@
 {
     "fields": {
       "feed": "Feed URL",
-      "includeArticleDescription": "Include Article Description"
+      "includeArticleDescription": "Include Article Description",
+      "timeSeparator": "Time Separator",
+      "dateFormat": "Date Format",
+      "timeFormat": "Time Format"
     },
     "options": {
-      "mode": {}
+      "mode": {
+        "System": "System Default"
+      }
     },
     "messages": {
     },

@@ -18,11 +18,44 @@
       "includeArticleDescription": {
         "type": "bool",
         "required": false
-      }
+      },
+      "dateFormat": {
+        "type": "enum",
+        "options": [
+          "System",
+          "DD.MM.YYYY", 
+          "MM/DD/YYYY", 
+          "DD/MM/YYYY", 
+          "YYYY-MM-DD", 
+          "DD. MM. YYYY"
+        ]
+    },
+    "timeFormat": {
+      "type": "enum",
+      "options": [
+        "System",
+        "HH:mm", 
+        "hh:mma", 
+        "hh:mmA", 
+        "hh:mm A", 
+        "hh:mm a"
+      ]
+  },
+  "timeSeparator": {
+    "type": "enum",
+    "options": [
+        " - ",
+        ", ",
+        " / "
+    ]
+}
     },
     "defaults": {
       "autorefreshInterval": 0.5,
-      "includeArticleDescription": false
+      "includeArticleDescription": true,
+      "dateFormat": "DD/MM/YYYY",
+      "timeFormat": "HH:mm",
+      "timeSeparator": ", "
     },
     "layout": [
       {
@@ -35,6 +68,9 @@
           ],
           [
             {"name": "autorefreshInterval"}, {"name": "includeArticleDescription"}
+          ],
+          [
+            {"name": "dateFormat"}, {"name": "timeFormat"}, {"name": "timeSeparator"}
           ]
         ]
       }

@@ -10,6 +10,9 @@ define('rss:views/dashlets/rss-dashlet', ['views/dashlets/abstract/base'], funct
             Dep.prototype.setup.call(this);
             this.feedData = [];
             this.includeArticleDescription = this.getOption("includeArticleDescription");
+            this.timeSeparator = this.getOption("timeSeparator");
+            this.dateFormat = this.getOption("dateFormat");
+            this.timeFormat = this.getOption("timeFormat");
             if (this.getOption("feed")) {
               this.loadFeed(true);
             }
@@ -29,8 +32,8 @@ define('rss:views/dashlets/rss-dashlet', ['views/dashlets/abstract/base'], funct
   
         loadFeed: function (initialLoad) {
             this.feedUrl = this.getOption("feed");
-            let dateFormat = this.getConfig().get('dateFormat');
-            let timeFormat = this.getConfig().get('timeFormat');
+            const dateFormat = this.dateFormat === "System" ? this.getConfig().get('dateFormat') : this.dateFormat;
+            const timeFormat = this.timeFormat === "System" ? this.getConfig().get('timeFormat') : this.timeFormat;
             const options = {
                 dataType: 'text'
             };
@@ -42,7 +45,7 @@ define('rss:views/dashlets/rss-dashlet', ['views/dashlets/abstract/base'], funct
                     const items = xmlDoc.querySelectorAll("item");
                     const feedData = Array.from(items).map(item => {
                         const pubDate = item.querySelector("pubDate").textContent;
-                        const formattedPubDate = moment(pubDate).format(dateFormat + ', ' + timeFormat);
+                        const formattedPubDate = moment(pubDate).format(dateFormat + this.timeSeparator + timeFormat);
                         const description = this.extractCdataContent(item.querySelector("description")) || this.extractCdataContent(item.querySelector("content")) || '';
                         return {
                             title: item.querySelector("title").textContent,
