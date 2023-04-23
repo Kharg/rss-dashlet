@@ -1,0 +1,12 @@
+{
+    "fields": {
+      "feed": "Feed URL"
+    },
+    "options": {
+      "mode": {}
+    },
+    "messages": {
+    },
+    "tooltips": {
+    }
+  }

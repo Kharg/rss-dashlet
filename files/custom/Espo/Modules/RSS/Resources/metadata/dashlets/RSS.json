@@ -1,0 +1,38 @@
+{
+  "view": "rss:views/dashlets/rss-dashlet",
+  "options": {
+    "fields": {
+      "title": {
+        "type": "varchar",
+        "trim": true,
+        "required": true
+      },
+      "feed": {
+        "type": "url",
+        "required": true
+      },
+      "autorefreshInterval": {
+        "type": "enumFloat",
+        "options": [0, 0.5, 1, 2, 5, 10]
+      }
+    },
+    "defaults": {
+      "autorefreshInterval": 0.5
+    },
+    "layout": [
+      {
+        "rows": [
+          [
+            { "name": "title" }
+          ],
+          [
+            { "name": "feed" }
+          ],
+          [
+            { "name": "autorefreshInterval" }
+          ]
+        ]
+      }
+    ]
+  }
+}

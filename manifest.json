@@ -1,0 +1,10 @@
+{
+  "name": "RSS Dashlet",
+  "description": "RSS Feed Dashlet for your dashboard.",
+  "author": "Andrew Fontana",
+  "acceptableVersions": [
+    ">=7.0.0"
+  ],
+  "version": "1.0.0",
+  "releaseDate": "21/04/2023"
+}
