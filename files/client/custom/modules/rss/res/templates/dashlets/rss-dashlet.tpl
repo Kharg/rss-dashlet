@@ -5,6 +5,7 @@
                 {{#each feedData}}
                     <li class="list-group-item list-row">
                         <a href="{{link}}" target="_blank" class="text-primary">{{title}}</a>
+                        <div class="text-muted">{{{preview}}}</div>
                         <div class="text-muted small">{{pubDate}}</div>
                     </li>
                 {{/each}}
