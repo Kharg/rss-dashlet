@@ -17,6 +17,9 @@ This Extension adds a RSS dashlet to read newsfeed from your dashboard with many
 - Hide Article Summary
 - Hide Article Time
 - AutoRefresh the feed
+- Limit Articles Number
+- Open Article in a Modal
+- Choose sorting order (asc - desc)
 
 After installation visit your dashboard and add the RSS Feed dashlet to start using the extension. 
 
