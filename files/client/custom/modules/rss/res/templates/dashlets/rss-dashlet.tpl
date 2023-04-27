@@ -4,7 +4,7 @@
             <ul class="list-group">
                 {{#each feedData}}
                     <li class="list-group-item list-row">
-                        <a href="{{link}}" target="_blank" class="text-primary">{{title}}</a>
+                        <a href="{{link}}" {{#unless ../showArticleInModal}}target="_blank"{{/unless}} class="text-primary rss-link">{{title}}</a>
                         {{#if ../includeArticleDescription}}
                             <div class="text-muted">{{{preview}}}</div>
                         {{/if}}

@@ -1,0 +1,1 @@
+<iframe class="rss-modal-iframe" title="Article Preview" src="{{url}}" width="100%" height="100%" frameborder="0"></iframe>

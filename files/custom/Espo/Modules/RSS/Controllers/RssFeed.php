@@ -11,9 +11,9 @@ use Espo\Core\Exceptions\NotFound;
 
 class RssFeed extends \Espo\Core\Controllers\Base
 {
-    public function getActionFeed($params, $data, $request)
+    public function postActionFeed($params, $data, $request)
     {
-        $url = $request->getQueryParam('url');
+        $url = $request->getParsedBody()->url;
         if (!$url) {
             throw new BadRequest('URL is not provided.');
         }
@@ -22,7 +22,7 @@ class RssFeed extends \Espo\Core\Controllers\Base
         if ($xml === false) {
             throw new NotFound();
         }
-
+        $xml = mb_convert_encoding($xml, 'UTF-8', mb_detect_encoding($xml, 'UTF-8, ISO-8859-1', true));
         return $xml;
     }
 }

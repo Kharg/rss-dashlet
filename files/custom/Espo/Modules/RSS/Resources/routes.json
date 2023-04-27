@@ -1,10 +1,10 @@
 [
-    {
-      "route": "/RssFeed/feed",
-      "method": "get",
-      "params": {
-        "controller": "RssFeed",
-        "action": "feed"
-      }
+  {
+    "route": "/RssFeed/feed",
+    "method": "post",
+    "params": {
+      "controller": "RssFeed",
+      "action": "feed"
     }
+  }
 ]

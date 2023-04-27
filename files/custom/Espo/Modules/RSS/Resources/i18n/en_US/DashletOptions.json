@@ -7,7 +7,8 @@
       "dateFormat": "Date Format",
       "timeFormat": "Time Format",
       "momentDateTimeFormat": "Custom DateTime Format",
-      "dateTimeOption": "Date Time Field"
+      "dateTimeOption": "Date Time Field",
+      "showArticleInModal": "Open in a Modal"
     },
     "options": {
       "mode": {}

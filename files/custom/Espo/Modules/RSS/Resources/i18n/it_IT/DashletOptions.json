@@ -7,7 +7,8 @@
       "dateFormat": "Formato Data",
       "timeFormat": "Formato Ora",
       "momentDateTimeFormat": "Formato DataOra Custom",
-      "dateTimeOption": "Campi DataOra"
+      "dateTimeOption": "Campi DataOra",
+      "showArticleInModal": "Apri Articolo su Espo"
     },
     "options": {
       "mode": {}
