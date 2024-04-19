@@ -13,12 +13,27 @@
       },
       "autorefreshInterval": {
         "type": "enumFloat",
-        "options": [0, 2, 5, 10]
+        "options": [
+          0,
+          2,
+          5,
+          10
+        ]
       },
       "displayRecords": {
         "type": "enumInt",
-        "options": [3,4,5,7,10,15,20,30,50]
-    },
+        "options": [
+          3,
+          4,
+          5,
+          7,
+          10,
+          15,
+          20,
+          30,
+          50
+        ]
+      },
       "includeArticleDescription": {
         "type": "bool",
         "required": false
@@ -35,51 +50,54 @@
         "type": "enum",
         "options": [
           "System",
-          "DD.MM.YYYY", 
-          "MM/DD/YYYY", 
-          "DD/MM/YYYY", 
-          "YYYY-MM-DD", 
+          "DD.MM.YYYY",
+          "MM/DD/YYYY",
+          "DD/MM/YYYY",
+          "YYYY-MM-DD",
           "DD. MM. YYYY"
         ]
-    },
-    "timeFormat": {
-      "type": "enum",
-      "options": [
-        "System",
-        "HH:mm", 
-        "hh:mma", 
-        "hh:mmA", 
-        "hh:mm A", 
-        "hh:mm a"
-      ]
-  },
-  "timeSeparator": {
-    "type": "enum",
-    "options": [
-        " - ",
-        ", ",
-        " / "
-    ]
-},
-"sortDirection": {
-  "type": "enum",
-  "view": "views/dashlets/fields/records/sort-direction",
-  "options": ["asc", "desc"],
-  "translation": "EntityManager.options.sortDirection"
-},
-"dateTimeOption": {
-  "type": "enum",
-  "tooltip": true,
-    "options": [
-        "Dashlet",
-        "Custom"
-    ]
-},
-"momentDateTimeFormat": {
-  "type": "varchar",
-  "trim": true,
-  "tooltip": true
-}
+      },
+      "timeFormat": {
+        "type": "enum",
+        "options": [
+          "System",
+          "HH:mm",
+          "hh:mma",
+          "hh:mmA",
+          "hh:mm A",
+          "hh:mm a"
+        ]
+      },
+      "timeSeparator": {
+        "type": "enum",
+        "options": [
+          " - ",
+          ", ",
+          " / "
+        ]
+      },
+      "sortDirection": {
+        "type": "enum",
+        "view": "views/dashlets/fields/records/sort-direction",
+        "options": [
+          "asc",
+          "desc"
+        ],
+        "translation": "EntityManager.options.sortDirection"
+      },
+      "dateTimeOption": {
+        "type": "enum",
+        "tooltip": true,
+        "options": [
+          "Dashlet",
+          "Custom"
+        ]
+      },
+      "momentDateTimeFormat": {
+        "type": "varchar",
+        "trim": true,
+        "tooltip": true
+      }
     },
     "defaults": {
       "displayRecords": 15,
@@ -98,25 +116,63 @@
       {
         "rows": [
           [
-            {"name": "title"}
+            {
+              "name": "title"
+            }
           ],
           [
-            {"name": "feed"}
+            {
+              "name": "feed"
+            }
           ],
           [
-            {"name": "includeArticleDescription"}, {"name": "includeArticleTime"}, {"name": "showArticleInModal"}
+            {
+              "name": "includeArticleDescription"
+            },
+            {
+              "name": "includeArticleTime"
+            },
+            {
+              "name": "showArticleInModal"
+            }
           ],
           [
-            {"name": "autorefreshInterval"}, {"name": "displayRecords"}, {"name": "sortDirection"}
+            {
+              "name": "autorefreshInterval"
+            },
+            {
+              "name": "displayRecords"
+            },
+            {
+              "name": "sortDirection"
+            }
           ],
           [
-            {"name": "dateFormat"}, {"name": "timeFormat"}, {"name": "timeSeparator"}
+            {
+              "name": "dateFormat"
+            },
+            {
+              "name": "timeFormat"
+            },
+            {
+              "name": "timeSeparator"
+            }
           ],
           [
-            {"name": "dateTimeOption"}, {"name": "momentDateTimeFormat"}
+            {
+              "name": "dateTimeOption"
+            },
+            {
+              "name": "momentDateTimeFormat"
+            }
           ]
         ]
       }
     ]
-  }
+  },
+  "accessDataList": [
+    {
+      "inPortalDisabled": false
+    }
+  ]
 }
